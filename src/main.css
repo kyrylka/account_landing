@@ -425,6 +425,11 @@ body {
     display: none;
     background-image: url(images/mobMenu.svg);
     background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+    margin-right: 150px;    
   }
   @media only screen and (max-width: 1366px){
     .section1366 {
@@ -474,6 +479,9 @@ body {
     .chessBlock .textBlock ul{
         font-size:16px;
     }
+    .menuContainer > nav{
+      text-align: right;
+    }
     .mainMenu{
         display:none;
         position: fixed;
@@ -481,7 +489,7 @@ body {
         top:32px;
         left:0;
         background-color: white;
-
+        text-align: center;
     }
     .mainMenu li{
         margin:0;
@@ -499,6 +507,9 @@ body {
     .mobMenuBtn{
         display: inline-block;
         text-align: left;
+    }
+    .menuContainer > nav li{
+      width:100%;
     }
 }
 @media only screen and (max-width: 768px){
