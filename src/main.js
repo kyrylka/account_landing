@@ -56,6 +56,9 @@ $('.slidingBlock:first-child').animate({
     
     createSvg();
     function createSvg(){
+			if(window.matchMedia("(max-width: 640px)").matches){
+				size=$(window).width()-20;
+			}
       var colorOnHover = $('#insertHere').attr('data-colorHOver');
       var colorInitial = '#01a6fe';
       var svgImage ='<svg usemap="#clickmap" width="'+size+'" height="'+size+'">';  
@@ -189,16 +192,7 @@ $('.slidingBlock:first-child').animate({
       } else {
         anglToRot=curPos;
       }
-      anglToRot=anglToRot*sign;  
-      /*
-      console.log("curPos="+curPos);  
-      if(curPos>90&& curPos<270){
-        anglToRot=-270+curPos;      
-      }else if(curPos>=270) {
-        anglToRot = curPos-270;
-      }else if(curPos<=90){
-        anglToRot = 90+curPos;
-      }*/
+      anglToRot=anglToRot*sign;      
       console.log('curPos='+curPos+'|| anglToRot='+anglToRot+" || delta="+delta);
       $('#insertHere svg').css("transform","rotate("+(anglToRot+delta)+"deg)");  
     }
