@@ -431,6 +431,9 @@ body {
     cursor:pointer;
     margin-right: 150px;    
   }
+  .chessImgContainer img {
+    max-width: 100%;
+}
   @media only screen and (max-width: 1366px){
     .section1366 {
       width: 100%;
@@ -516,7 +519,45 @@ body {
     .gridElementContainer {
         width:100%;
     }
-    
+    .textBlock h2 {
+      font-size: 20px;
+  }
+  .chessBlock .textBlock ul {
+      font-size: 14px;
+      margin-left: 10px;
+  }
+  .chessBlock .textBlock, .chessImgContainer, .imgField {
+      width: 100%;
+      float: none;
+  }
+  .chessBlock .pull-left, .chessBlock .pull-right {
+      position: relative;
+      top: 0px;    
+  }
+  .chessImgContainer img {
+      width: 60%;
+  }
+  .chessBlock {
+      display: flex;
+      flex-flow: column-reverse;
+  }
+  .textBlock.pullleft, .textBlock.pullright {      
+      max-width: calc(100% - 30px);
+  }
+  .pullLeft, .pullRight {
+    position: relative;
+  }
+  .chessBack.left, .chessBack.right {
+    left: 0;
+    right: 0px;
+  }
+  .chessBlock  ul{    
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
 }
 @media only screen and (max-width: 640px){
   #insertHere{font: normal 18px sans-serif;}
@@ -532,6 +573,14 @@ body {
     position: absolute;
     top:9px;
     left:9px;    
+  }
+  .rotatorBack, .line{
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px){
+  .chessImgContainer img {
+    width: 90%;
   }
 }
 @media only screen and (max-width: 420px ){
