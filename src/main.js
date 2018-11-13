@@ -48,7 +48,7 @@ $('.slidingBlock:first-child').animate({
     }
     /*end place cirles in circle*/
     /*Ration pic switcher*/
-    var textToConvert=['Monetization  tools','Accurate Analytics','Social Networking','Customer Support','Advanced Content Management'];
+    var textToConvert=['Monetization Tools','Accurate Analytics','Social Networking','Customer Support','Content Management'];
     var globS, globE;
     var size=622;
     var charSpace = 0.67;

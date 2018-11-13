@@ -177,13 +177,13 @@ body {
     background-color: transparent;
   }
   .firstCard:after {
-    background-image:url(src/images/ruchki.svg);  
+    background-image:url(images/ruchki.svg);  
   }
   .secondCard:after {
-    background-image:url(src/images/Variable_web_presence.svg);  
+    background-image:url(images/Variable_web_presence.svg);  
   }
   .thirdCard:after {
-    background-image:url(src/images/Featured_and_simple_monetization.svg);  
+    background-image:url(images/Featured_and_simple_monetization.svg);  
   }
   /*start of rotator code*/
   .rotating {  
