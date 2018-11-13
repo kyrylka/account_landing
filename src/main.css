@@ -177,13 +177,13 @@ body {
     background-color: transparent;
   }
   .firstCard:after {
-    background-image:url(https://storage.ning.com/topology/rest/1.0/file/get/131148033?profile=original);  
+    background-image:url(src/images/ruchki.svg);  
   }
   .secondCard:after {
-    background-image:url(https://storage.ning.com/topology/rest/1.0/file/get/131148033?profile=original);  
+    background-image:url(src/images/Variable_web_presence.svg);  
   }
   .thirdCard:after {
-    background-image:url(https://storage.ning.com/topology/rest/1.0/file/get/131148033?profile=original);  
+    background-image:url(src/images/Featured_and_simple_monetization.svg);  
   }
   /*start of rotator code*/
   .rotating {  
