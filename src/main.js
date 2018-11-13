@@ -52,7 +52,7 @@ $('.slidingBlock:first-child').animate({
     var globS, globE;
     var size=622;
     var charSpace = 0.67;
-    var picturesToText = ['https://d242fdlp0qlcia.cloudfront.net/uploads/2016/01/23191504/richtexteditor2.png','https://d242fdlp0qlcia.cloudfront.net/uploads/2016/01/23191859/icanhasURL-1024x598.png','https://d242fdlp0qlcia.cloudfront.net/uploads/2016/01/24025611/linkFIX.png','https://d242fdlp0qlcia.cloudfront.net/uploads/2016/01/23191859/linkinmarkdown.png','https://d242fdlp0qlcia.cloudfront.net/uploads/2016/01/23191718/copyimageaddress.png'];
+    var picturesToText = ['src/images/monTools_v2.svg','src/images/Accurate_Analytics.svg','src/images/Social_Networking.svg','src/images/Customer_Support.svg','src/images/advanced_controls_v2.svg'];
     
     createSvg();
     function createSvg(){
