@@ -465,6 +465,25 @@ body {
     .menuContainer > nav a {
         font-size: 14px;
     }
+    .inputContainer.pullleft, .btnContainer.pullright{
+      float: none;
+    }
+    .inputContainer >*{
+      display: block;    
+  }
+  .inputContainer input {
+      width: calc(50vw - 40px);
+      margin-left: 20px;
+      margin-right: 20px;
+      height: 26px;
+  }
+  .footer .section1366 {
+      display: flex;
+      justify-content: center;
+  }
+  .btnContainer {
+      margin-top: 130px
+  }    
 }
 @media only screen and (max-width: 900px){
     .textUnderSlidingBlock {
@@ -601,5 +620,11 @@ body {
 }
 @media only screen and (max-width: 420px ){
     #insertHere{font: normal 14px sans-serif;}    
+}
+@media only screen and (max-width: 430px){
+    .btnContainer {
+    margin-top: 100px;
+    text-align: center;
+}
 }
   

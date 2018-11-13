@@ -26,6 +26,7 @@ $('.slidingBlock:first-child').animate({
 				placeInRound();
 			}else{
 				$('.circlesBlock').attr('style','');
+				var elems = $('.circleBlock');
 				elems.each(function(){				
 					$(this).attr('style','');
 				});
