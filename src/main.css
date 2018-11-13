@@ -421,7 +421,9 @@ body {
     -moz-box-shadow: inset 0px 8px 15px -4px rgba(82,82,82,0.49);
     box-shadow: inset 0px 8px 15px -4px rgba(82,82,82,0.49);
   }
-  
+  .mobMenuBtn {
+    display: none;    
+  }
   @media only screen and (max-width: 1366px){
     .section1366 {
       width: 100%;
@@ -493,7 +495,8 @@ body {
         border-bottom: 2px solid #94cd06;
     }
     .mobMenuBtn{
-        display: block;
+        display: inline-block;
+        text-align: left;
     }
 }
 @media only screen and (max-width: 768px){
