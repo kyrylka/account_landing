@@ -422,7 +422,9 @@ body {
     box-shadow: inset 0px 8px 15px -4px rgba(82,82,82,0.49);
   }
   .mobMenuBtn {
-    display: none;    
+    display: none;
+    background-image: url(images/mobMenu.svg);
+    background-repeat: no-repeat;
   }
   @media only screen and (max-width: 1366px){
     .section1366 {
