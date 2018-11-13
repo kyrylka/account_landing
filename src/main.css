@@ -84,6 +84,7 @@ body {
     background-size: cover;
     margin-top: 50px;  
     position: relative;
+    background-position: center center;
   }
   .relative {
     position: relative;

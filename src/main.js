@@ -272,4 +272,4 @@ var count = 0;
       if(counter===3){
         counter=0;
       }
-    },3000);
+    },4000);
