@@ -175,6 +175,8 @@ body {
     border: none;
     border-radius: 0px;
     background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   .firstCard:after {
     background-image:url(images/ruchki.svg);  
@@ -353,6 +355,21 @@ body {
   }
   .blue {
     box-shadow: 0 0px 26px rgba(0,167,254,.22);  
+  }
+  .red {
+    box-shadow: 0 0px 26px rgba(246,76,77,.16);  
+  }
+  .lightblue {
+    box-shadow: 0 0px 26px rgba(123,226,216,.44);  
+  }
+  .purple {
+    box-shadow: 0 0px 26px rgba(106,93,226,.11);  
+  }
+  .orange {
+    box-shadow: 0 0px 26px rgba(224,110,0,.22);  
+  }
+  .green {
+    box-shadow: 0 0px 26px rgba(54,185,0,.3);  
   }
   .circleBlock h3{
     text-align: center;
