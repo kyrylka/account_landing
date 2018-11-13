@@ -11,10 +11,25 @@ $('.slidingBlock:first-child').animate({
     opacity: "toggle"
     },400)
     });}
-    /*Place cicles in cicrle*/
-    placeInRound();
+		/*Place cicles in cicrle*/
+		if(window.matchMedia('(min-width: 840px)').matches){
+			placeInRound();
+		}else{
+			$('.circlesBlock').attr('style','');
+			var elems = $('.circleBlock');
+			elems.each(function(){				
+				$(this).attr('style','');
+			});
+		}
     $(window).resize(function(){
-      placeInRound();  
+			if(window.matchMedia('(min-width: 840px)').matches){
+				placeInRound();
+			}else{
+				$('.circlesBlock').attr('style','');
+				elems.each(function(){				
+					$(this).attr('style','');
+				});
+			}
     });
     function placeInRound(){
       var elems = $('.circleBlock');
@@ -37,8 +52,7 @@ $('.slidingBlock:first-child').animate({
       cx = widthC/2;
       cy = maxH*3/2;
       var coords=[];
-      for(var j=0; j<360; j+=60){
-        /*console.log("maxH="+maxH+'||j='+j+'||cx='+cx+"||cy="+cy);*/
+      for(var j=0; j<360; j+=60){      
         coords.push(calcTraversalPoint(maxH, j, cx, cy));
       }
       for(var i=0; i< elems.length; i++){
@@ -178,8 +192,7 @@ $('.slidingBlock:first-child').animate({
         delta360 = (delta-delta%360);
       }
       var curPos=anglToRot-delta;
-      // small experiment
-      curPos=curPos+90;// 
+      curPos=curPos+90; 
       var curPos360=curPos-(curPos%360);
       curPos=curPos-curPos360;
       var sign=1;

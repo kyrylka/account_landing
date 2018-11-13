@@ -515,6 +515,18 @@ body {
       width:100%;
     }
 }
+@media only screen and (max-width: 840px){
+  .circlesBlock {
+      margin-top: 20px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+  }
+  .circleBlock{
+      position: static;
+      transform: translate(0px, 0px);
+  } 
+}
 @media only screen and (max-width: 768px){
     .gridElementContainer {
         width:100%;
@@ -582,6 +594,10 @@ body {
   .chessImgContainer img {
     width: 90%;
   }
+  .pullRight, .pullLeft {
+    right: 0px;
+    left: 0px;
+}
 }
 @media only screen and (max-width: 420px ){
     #insertHere{font: normal 14px sans-serif;}    
