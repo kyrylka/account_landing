@@ -491,9 +491,10 @@ body {
       width: 400px;
     }
     .textUnderSlidingBlock:nth-child(4) {
-        top: calc(20% + 266px);
+        top: calc(20% + 246px);
         font-size: 16px;
-        width: 600px;       
+        width: 600px;
+        max-width: calc( 100vw - 120px);       
     }
     .block1{
         height: 450px;
@@ -533,6 +534,17 @@ body {
     .menuContainer > nav li{
       width:100%;
     }
+    .slidingBlock {      
+      right: -140px;
+    }
+    .textUnderSlidingBlock {
+      top: calc(20% + 46px);
+      right: 60px;
+    }
+    .slidingBlock:nth-child(3) {
+      top: calc(20% + 190px);
+  }
+
 }
 @media only screen and (max-width: 840px){
   .circlesBlock {
@@ -609,6 +621,33 @@ body {
     display: none;
   }
 }
+@media only screen and (max-width: 540px){
+  .slidingBlock{
+      right: -150px;
+      top: 10%;
+      width: 60px;
+      height: 20px;
+  }
+  .textUnderSlidingBlock {
+      top: calc(10% + 40px);
+      right: 50px;
+      font-size:20px; 
+      width: 250px;
+      max-width: calc( 100vw - 130px);
+  }
+  .slidingBlock:nth-child(3) {
+      top: calc(20% + 90px);
+  }
+  .textUnderSlidingBlock:nth-child(4) {
+      top: calc(20% + 130px);
+      font-size: 14px;
+      width: 600px;
+      max-width: calc( 100vw - 130px);
+  } 
+  .block1 {
+      background-position: center;
+  }  
+}
 @media only screen and (max-width: 480px){
   .chessImgContainer img {
     width: 90%;
@@ -627,4 +666,3 @@ body {
     text-align: center;
 }
 }
-  
