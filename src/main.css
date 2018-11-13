@@ -142,6 +142,7 @@ body {
     margin: 120px auto 60px auto;
     position: relative;
     box-shadow: 0 8px 30px rgba(57,57,57,.10);
+    min-height: 279px;
   }
   .gridCard h2 {
     font-size: 18px;
@@ -434,4 +435,71 @@ body {
     right: 30px;
   }
   }
+  @media only screen and (max-width: 1125px){
+    .gridContainer{
+        display: flex;
+        justify-content: center;
+        flex-flow:row wrap;
+    }
+    .gridElementContainer {
+        width:50%;
+    }
+    .gridCard{
+        margin:120px auto 0px auto;
+    }
+    .thirdCard {
+        margin-bottom: 60px;
+    }
+    .menuContainer > nav a {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 900px){
+    .textUnderSlidingBlock {
+      font-size: 35px;
+      width: 400px;
+    }
+    .textUnderSlidingBlock:nth-child(4) {
+        top: calc(20% + 266px);
+        font-size: 16px;
+        width: 600px;       
+    }
+    .block1{
+        height: 450px;
+    }
+    .chessBlock .textBlock ul{
+        font-size:16px;
+    }
+    .mainMenu{
+        display:none;
+        position: fixed;
+        width: 100%;
+        top:32px;
+        left:0;
+        background-color: white;
+
+    }
+    .mainMenu li{
+        margin:0;
+    }
+    .mainMenu li a{
+        width: 100%;
+        display:block;
+        padding: 12px;
+        font-size: 18px;
+        border-bottom: 2px solid white;
+    }
+    .mainMenu li a:hover{        
+        border-bottom: 2px solid #94cd06;
+    }
+    .mobMenuBtn{
+        display: block;
+    }
+}
+@media only screen and (max-width: 768px){
+    .gridElementContainer {
+        width:100%;
+    }
+    
+}
   
