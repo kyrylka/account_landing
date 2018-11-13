@@ -250,8 +250,14 @@ var count = 0;
         if (this.hash !== "") {
           event.preventDefault();
           var hash = this.hash;
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top - 140
+          var delta=0;
+          if(window.matchMedia('(max-width: 768px)').matches){
+            delta=140;
+          }else{          
+            delta = $(window).height()/2-$(hash).height()/2;
+          }
+          $('html, body').animate({            
+            scrollTop: $(hash).offset().top - delta
           }, 800);
         }
       });
