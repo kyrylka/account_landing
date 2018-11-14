@@ -263,7 +263,7 @@ var count = 0;
       });
     });
 
-    var backsList = ['images/var2.jpg','images/var3.jpg','images/var1.jpg'];
+    var backsList = ['images/var2.jpg','images/var3.jpg','images/var4.jpg'];
     var counter =0;
     var inter = setInterval(function(){
       $('.block1').attr('style','background-image: url(src/'+ backsList[counter]+')');
