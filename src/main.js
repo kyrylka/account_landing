@@ -273,3 +273,43 @@ var count = 0;
         counter=0;
       }
     },4000);
+    
+    $('.requestDemo').click(function(){
+      var requestDemoData={};
+      var mass = $('.inputContainer input'); 
+      for(var i=0; i<i.length; i++){
+        requestDemoData[$(mass[i]).attr('name')]=$(mass[i]).val();
+      }
+      var keys = ObjectKeys(requestDemoData);
+      for(var i=0; i<keys.length; i++){
+        if(requestDemoData[keys[i]]===''){
+          requestDemoData[keys[i]]='Not specified';
+          if(keys[i]==="email"){
+            requestDemoData[keys[i]]='notspecified@email.com';
+          }
+        }
+      }
+      sendEmailShare(requestDemoData['email'], 'welcome@ning.com', 'Demo request', 'Name='+requestDemoData['name']+'/n PhoneNumber='+requestDemoData['phoneNumber']);
+      mass.each(function(){
+        $(this).val('');
+      });
+    });
+    function sendEmailShare(sender, receivers, subject, body_text){
+      var request = new XMLHttpRequest;
+      body_text = encodeURI(body_text);
+      request.open('POST', 'https://api.elasticemail.com/v2/email/send?apikey=b1f17190-9bbf-4c16-b14e-047dc0829a5d&isTransactional=true&subject='+subject+'&replyTo='+sender+'&to='+receivers+'&from='+sender+'&bodyText='+body_text, true);
+      request.send();
+      request.onreadystatechange = function(){
+        if(request.readyState === 4 && request.status === 200) {
+          var response = JSON.parse(request.responseText);
+          if (response.success === true){
+            $('.shareBody textarea').val("Your message has been sent. This pop-up would be closed in 3 seconds");
+            setTimeout (function(){
+              $('.shareContainer').remove();
+            }, 3000);
+          } else {
+            $('.shareBody textarea').after('<p style="color:red; font-size: 12px;">Sorry! Some error has occured!Please check the email address you have entered if it\'s right try again later or contact site administrator.</p>')
+          }   
+        }   
+      }
+    }
