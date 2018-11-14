@@ -278,17 +278,11 @@ var count = 0;
       event.preventDefault();
       var requestDemoData={};
       var mass = $('.inputContainer input'); 
-      for(var i=0; i<i.length; i++){
-        requestDemoData[$(mass[i]).attr('name')]=$(mass[i]).val();
-      }
-      var keys = Object.keys(requestDemoData);
-      for(var i=0; i<keys.length; i++){
-        if(requestDemoData[keys[i]]===''){
-          requestDemoData[keys[i]]='Not specified';
-          if(keys[i]==="email"){
-            requestDemoData[keys[i]]='notspecified@email.com';
-          }
-        }
+      requestDemoData.name = $('input[name="name"]').val();
+      requestDemoData.phoneNumber = $('input[name="phoneNumber"]').val();
+      requestDemoData.email = $('input[name="email"]').val();
+      if(requestDemoData.email==='' || typeof requestDemoData.email==="undefined" || requestDemoData.email.indexOf('@')<0){
+        requestDemoData.email="notspecified@test.com";
       }
       sendEmailShare(requestDemoData['email'], 'welcome@ning.com', 'Demo request', 'Name='+requestDemoData['name']+'/n PhoneNumber='+requestDemoData['phoneNumber']);
       mass.each(function(){
