@@ -274,7 +274,8 @@ var count = 0;
       }
     },4000);
     
-    $('.requestDemo').click(function(){
+    $('.requestDemo').click(function(event){
+      event.preventDefault();
       var requestDemoData={};
       var mass = $('.inputContainer input'); 
       for(var i=0; i<i.length; i++){
